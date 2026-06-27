@@ -1,5 +1,5 @@
 import React from "react";
-
+import { Link } from "react-router-dom";
 const beliefs = [
   {
     title: "Integrity",
@@ -168,7 +168,9 @@ export default function WhatWeBelievePremium() {
                  <br/>
               We believe that technology should simplify, not complicate — and every solution we create reflects that philosophy.
             </p>
-            <a href="/about" className="btn">Learn More →</a>
+           <Link to="/about" className="btn">
+  Learn More →
+</Link>
           </div>
 
           {/* RIGHT — image */}

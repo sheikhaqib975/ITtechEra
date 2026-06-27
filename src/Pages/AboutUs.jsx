@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import officeImg from "../assets/Images/office.png";
+import { Link } from "react-router-dom";
 // import Navbar from "../components/Navbar";
 
 /* ── scroll reveal hook ── */
@@ -885,12 +886,12 @@ export default function AboutUs() {
             faster in a connected world.
           </p>
           <div className="au-hero-btns">
-            <a href="/contact" className="au-btn-primary">
-              Work With Us
+            <Link to="/contact" className="au-btn-primary">
+  Work With Us
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                 <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
               </svg>
-            </a>
+           </Link>
             <a href="#mission" className="au-btn-outline">
               Our Story
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">

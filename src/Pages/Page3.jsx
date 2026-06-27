@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
-
+import { useNavigate } from "react-router-dom";
 export default function ModernCompanyHero() {
   const [loaded, setLoaded] = useState(false);
   const [tilt, setTilt] = useState({ x: 0, y: 0 });
-
+const navigate = useNavigate();
   useEffect(() => {
     setLoaded(true);
   }, []);
@@ -22,17 +22,17 @@ export default function ModernCompanyHero() {
 
   // "Contact Us" → #contact section par scroll kare
   const handleContactUs = () => {
-    const contactSection =
-      document.getElementById("contact") ||
-      document.getElementById("contact-us") ||
-      document.querySelector("section[data-section='contact']");
+  const contactSection =
+    document.getElementById("contact") ||
+    document.getElementById("contact-us") ||
+    document.querySelector("section[data-section='contact']");
 
-    if (contactSection) {
-      contactSection.scrollIntoView({ behavior: "smooth" });
-    } else {
-      window.location.href = "/contact";
-    }
-  };
+  if (contactSection) {
+    contactSection.scrollIntoView({ behavior: "smooth" });
+  } else {
+    navigate("/contact");
+  }
+};
 
   return (
     <section className="hero-section">

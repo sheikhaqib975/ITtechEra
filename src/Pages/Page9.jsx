@@ -490,7 +490,7 @@ export default function App() {
               <span className="accent-green">growth</span>{" "}in the digital industry.
             </p>
 
-            <div className="contact-row">
+            {/* <div className="contact-row">
               <div className="contact-icon">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#b8d400" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <rect x="2" y="4" width="20" height="16" rx="2"/>
@@ -498,7 +498,7 @@ export default function App() {
                 </svg>
               </div>
               <span className="contact-email">contact@ittechera.co.uk</span>
-            </div>
+            </div> */}
           </div>
 
           {/* RIGHT */}
