@@ -12,7 +12,7 @@ export default function Navbar() {
     { name: "Home", type: "route", to: "/" },
     { name: "About", type: "route", to: "/about" },
     { name: "Services", type: "route", to: "/services" },
-    { name: "Products", type: "route", to: "/products" },
+    // { name: "Products", type: "route", to: "/products" },
     { name: "Contact", type: "route", to: "/contact" },
   ];
 
