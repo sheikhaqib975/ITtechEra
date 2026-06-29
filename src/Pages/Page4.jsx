@@ -13,7 +13,7 @@ export default function OriginStoryTop() {
     {
       name: "Anoba Noor",
       role: "Co‑Founder",
-      desc: "Technology strategist delivering scalable software solutions.",
+      desc: "Results-oriented leader passionate about innovation and technology.",
       img: avatar
     }
   ];
