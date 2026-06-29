@@ -1,4 +1,7 @@
 import { useEffect, useRef } from "react";
+import img1 from "../assets/Images/page8img1.jfif";
+import img2 from "../assets/Images/page8img2.jfif";
+
 
 const trustItems = [
   {
@@ -217,10 +220,10 @@ export default function TrustSection() {
             {Array(20).fill(0).map((_, i) => <span key={i}></span>)}
           </div>
           <div className="tw-photo tw-big" ref={bigRef}>
-            <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=560&q=80" alt="Team celebration"/>
+            <img src={img1} alt="Team celebration"/>
           </div>
           <div className="tw-photo tw-small" ref={smallRef}>
-            <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=400&q=80" alt="Team working"/>
+            <img src={img2} alt="Team working"/>
           </div>
         </div>
       </div>

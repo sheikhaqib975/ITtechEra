@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import img from "../assets/Images/page3img.avif";
 export default function ModernCompanyHero() {
   const [loaded, setLoaded] = useState(false);
   const [tilt, setTilt] = useState({ x: 0, y: 0 });
@@ -314,7 +315,7 @@ const navigate = useNavigate();
           >
             <img
               className="hero-image"
-              src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=900&q=80"
+              src={img}
               alt="company"
             />
 

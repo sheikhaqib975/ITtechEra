@@ -708,7 +708,7 @@ export default function ContactUs() {
               Let's discuss how we can help your business grow with digital solutions.
             </div>
           </div>
-          <a href="tel:+442045189040" className="btn-cta">
+          <a href="tel:+92 3419 168831" className="btn-cta">
             Schedule a Call
             <div className="btn-cta-arrow"><Icon.Arrow /></div>
           </a>

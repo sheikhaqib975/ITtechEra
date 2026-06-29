@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import img from "../assets/Images/page5img.avif";
 const beliefs = [
   {
     title: "Integrity",
@@ -176,7 +177,7 @@ export default function WhatWeBelievePremium() {
           {/* RIGHT — image */}
           <div className="image-card">
             <img
-              src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=900&q=80"
+              src={img}
               alt="Team"
             />
           </div>

@@ -94,10 +94,10 @@ const services = [
 ];
 
 const team = [
-  { name: "Ali Raza", role: "Founder & CEO", initial: "A" },
-  { name: "Sarah Khan", role: "Lead Developer", initial: "S" },
-  { name: "James Miller", role: "UX/UI Designer", initial: "J" },
-  { name: "Priya Sharma", role: "Digital Strategist", initial: "P" },
+  { name: "Ahmed Abbas", role: "Senior Developer", initial: "A" },
+  { name: "Bilal Ahmed", role: "SEO Specialist", initial: "B" },
+  { name: "Ali Abbas", role: "Senior Developer", initial: "A" },
+  { name: "Nida Khan", role: "HR & Finance Manager", initial: "N" },
 ];
 
 const timeline = [
