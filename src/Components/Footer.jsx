@@ -6,6 +6,8 @@ const navLinks = [
   { label: "Services", to: "/services" },
   // { label: "Profile",  to: "/profile" },
   { label: "Contact",  to: "/contact" },
+  { label: "Terms & Conditions", to: "/terms" },
+  { label: "Privacy Policy", to: "/privacy" }
 ];
 
 export default function Footer() {

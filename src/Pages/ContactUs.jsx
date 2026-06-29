@@ -15,7 +15,38 @@ function useInView(threshold = 0.15) {
   }, [threshold]);
   return [ref, visible];
 }
-
+const faqs = [
+  {
+    question: "What services does IT Tech Era provide?",
+    answer:
+      "We offer Web Development, Mobile App Development, UI/UX Design, Digital Marketing, SEO, Branding, and Custom Software Development."
+  },
+  {
+    question: "How long does it take to complete a project?",
+    answer:
+      "The timeline depends on the project scope. A standard website usually takes 2–4 weeks, while larger applications may require more time."
+  },
+  {
+    question: "Do you provide website maintenance after launch?",
+    answer:
+      "Yes. We provide ongoing maintenance, updates, bug fixes, and technical support after deployment."
+  },
+  {
+    question: "Can you redesign my existing website?",
+    answer:
+      "Absolutely. We can redesign your current website with a modern interface, better performance, and improved user experience."
+  },
+  {
+    question: "How much does a project cost?",
+    answer:
+      "Pricing depends on the project requirements and features. Contact us for a free consultation and quotation."
+  },
+  {
+    question: "How do I get started?",
+    answer:
+      "Simply fill out the contact form or call us directly. Our team will discuss your requirements and guide you through the next steps."
+  }
+];
 const Icon = {
   Pin: () => (
     <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -151,7 +182,11 @@ export default function ContactUs() {
 
   const navigate = useNavigate();
   const location = useLocation();
+const [open, setOpen] = useState(null);
 
+const toggleFAQ = (index) => {
+  setOpen(open === index ? null : index);
+};
   // ── Scroll to #page6 on homepage after navigation ──
   useEffect(() => {
     if (location.pathname === "/" && location.hash === "#page6") {
@@ -501,6 +536,64 @@ export default function ContactUs() {
         }
         .fm-panel.vis { opacity: 1; transform: translateY(0); }
 
+        .faq-section{
+    padding:80px 6vw;
+    background:#f5f7f0;
+}
+
+.faq-container{
+    max-width:900px;
+    margin:auto;
+}
+
+.faq-item{
+    background:#fff;
+    border-radius:12px;
+    margin-bottom:16px;
+    box-shadow:0 5px 18px rgba(0,0,0,.06);
+    overflow:hidden;
+}
+
+.faq-question{
+ text-align:left;
+    width:100%;
+    border:none;
+    background:#fff;
+    padding:22px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    font-size:15px;
+    font-weight:500;
+    cursor:pointer;
+    font-family:Inter,sans-serif;
+}
+
+.faq-question:hover{
+    color:#b8d400;
+}
+
+.faq-answer{
+    padding: 0 22px 22px;
+    color: #1c2238;
+    font-size: 15px;
+    line-height: 1.8;
+    border-top: 1px solid #eef1e6;
+    background: #fff;
+    animation: fadeIn .3s ease;
+}
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:translateY(-8px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
         .cta-section {
           padding: 0 6vw 80px;
           background: var(--bg);
@@ -697,7 +790,23 @@ export default function ContactUs() {
           </div>
         </div>
       </section>
+{faqs.map((faq, index) => (
+  <div className="faq-item" key={index}>
+    <button
+      className="faq-question"
+      onClick={() => toggleFAQ(index)}
+    >
+      {faq.question}
+      <span>{open === index ? "−" : "+"}</span>
+    </button>
 
+    {open === index && (
+      <div className="faq-answer">
+        {faq.answer}
+      </div>
+    )}
+  </div>
+))}
       {/* ── CTA BANNER ── */}
       <section className="cta-section">
         <div ref={ctaRef} className={`cta-banner${ctaVis ? " vis" : ""}`}>

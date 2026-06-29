@@ -172,12 +172,12 @@ export default function HeroSection() {
         }
 
         /* ── Hero body (fills space between navbar and stats) ── */
-        .itcH__body {
-          flex: 1;
-          display: flex;
-          align-items: center;
-          padding: 40px 0 32px;
-        }
+       .itcH__body {
+  flex: 1;
+  display: flex;
+  align-items: center; 
+  padding: 120px 0 60px; 
+}
 
         /* ── Left text column ── */
         .itcH__left {
