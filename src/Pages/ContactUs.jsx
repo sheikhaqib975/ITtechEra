@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import officeImg from "../assets/Images/office3.png";
+import emailjs from "@emailjs/browser";
 
 function useInView(threshold = 0.15) {
   const ref = useRef(null);
@@ -213,11 +214,39 @@ const toggleFAQ = (index) => {
 
   const handleChange = (e) => setForm(f => ({ ...f, [e.target.name]: e.target.value }));
   const handleSubmit = (e) => {
-    e.preventDefault();
-    setSent(true);
-    setTimeout(() => setSent(false), 4000);
-    setForm({ name: "", email: "", phone: "", subject: "", message: "" });
-  };
+  e.preventDefault();
+
+  emailjs
+    .send(
+      "service_ittechera",
+      "template_ForContactpage",
+      {
+        name: form.name,
+        email: form.email,
+        phone: form.phone,
+        subject: form.subject,
+        message: form.message,
+      },
+      "rpEfR9aswOkxmTYt8"
+    )
+    .then(() => {
+      setSent(true);
+
+      setForm({
+        name: "",
+        email: "",
+        phone: "",
+        subject: "",
+        message: "",
+      });
+
+      setTimeout(() => setSent(false), 4000);
+    })
+    .catch((error) => {
+      console.log(error);
+      alert("Failed to send message.");
+    });
+};
 
   return (
     <div style={{ position: "relative" }}>
