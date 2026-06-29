@@ -332,7 +332,7 @@ const styles = {
   },
   hero: {
     background: "#1c2238",
-    padding: "80px 6vw 60px",
+    padding: "100px 6vw 60px",
   },
   heroInner: {
     maxWidth: 760,

@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import { useNavigate, Link } from "react-router-dom";
-import serviceHeroImg from "../assets/Images/office.png";
+import serviceHeroImg from "../assets/Images/office2.png";
 
 /* ── scroll reveal hook ── */
 function useInView(threshold = 0.15) {

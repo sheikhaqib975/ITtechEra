@@ -1,7 +1,8 @@
 
 import React from "react";
 import Founderimg from "../assets/Images/Founderimg.jpeg";
-import avatar from "../assets/Images/avatar.png"
+import founder from "../assets/Images/founder.png";
+
 export default function OriginStoryTop() {
   const founders = [
     {
@@ -14,7 +15,7 @@ export default function OriginStoryTop() {
       name: "Anoba Noor",
       role: "Co‑Founder",
       desc: "Results-oriented leader passionate about innovation and technology.",
-      img: avatar
+      img: founder
     }
   ];
 

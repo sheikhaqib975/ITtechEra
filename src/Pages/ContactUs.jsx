@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
-import officeImg from "../assets/Images/office.png";
+import officeImg from "../assets/Images/office3.png";
 
 function useInView(threshold = 0.15) {
   const ref = useRef(null);

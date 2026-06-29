@@ -209,7 +209,7 @@ const styles = {
   },
   hero: {
     background: "#1c2238",
-    padding: "80px 6vw 60px",
+    padding: "100px 6vw 60px",
   },
   heroInner: {
     maxWidth: 760,
@@ -223,7 +223,7 @@ const styles = {
     fontWeight: 600,
     letterSpacing: "0.08em",
     textTransform: "uppercase",
-    padding: "4px 12px",
+    padding: "10px 12px",
     borderRadius: 20,
     marginBottom: 18,
   },
