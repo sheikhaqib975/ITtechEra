@@ -12,7 +12,7 @@ import DigitalExcellence from "./Pages/DigitalExcellence";
 import OriginStory from "./Pages/OriginStory";
 import WhatWeBelieve from "./Pages/Whatwebelief";
 import Servicescard from "./Pages/ServicesCards";
-import ImageSlider from "./Pages/imageslider";
+import ImageSliders from "./Pages/Imageslider";
 import OurClients from "./Pages/OurClients";
 import ClientTrust from "./Pages/Clienttrust";
 import Milestones from "./Pages/Milestones";
@@ -76,7 +76,7 @@ function App() {
               </section>
 
               <section id="page7">
-                <ImageSlider />
+                <ImageSliders />
               </section>
 
               <section id="page8">
