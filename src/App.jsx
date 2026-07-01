@@ -5,19 +5,25 @@ import { useEffect } from "react";
 import Navbar from "./Components/Navbar";
 import Footer from "./Components/Footer";
 
+
 // Home Sections
 import Hero from "./Pages/Heropage";
-import CompanyProfilepage3 from "./Pages/Page3";
-import CompanyProfilepage4 from "./Pages/Page4";
-import CompanyProfilepage5 from "./Pages/Page5";
-import CompanyProfilepage7 from "./Pages/Page7";
-import CompanyProfilepage8 from "./Pages/Page8";
-import CompanyProfilepage9 from "./Pages/Page9";
+import DigitalExcellence from "./Pages/DigitalExcellence";
+import OriginStory from "./Pages/OriginStory";
+import WhatWeBelieve from "./Pages/Whatwebelief";
+import Servicescard from "./Pages/ServicesCards";
+import ImageSlider from "./Pages/imageslider";
+import OurClients from "./Pages/OurClients";
+import ClientTrust from "./Pages/Clienttrust";
+import Milestones from "./Pages/Milestones";
+import WorkWithUs from "./Pages/Workwithus";
+import ReviewsSection from "./Pages/ReviewsSection";
 
 // Pages
 import AboutPage from "./Pages/AboutUs";
 import ContactPage from "./Pages/ContactUs";
-import ServicesPage from "./Pages/Services"; // <-- Your new Services page
+import ServicesPage from "./Pages/Services";
+import ServiceDetails from "./Pages/ServicesDetails";
 import TCPage from "./Pages/TermsCondition";
 import PrivacyPage from "./Pages/PrivacyPolicy";
 
@@ -28,7 +34,7 @@ function ScrollToTop() {
   useEffect(() => {
     window.scrollTo({
       top: 0,
-      behavior: "instant",
+      behavior: "auto",
     });
   }, [pathname]);
 
@@ -54,29 +60,44 @@ function App() {
               </section>
 
               <section id="page3">
-                <CompanyProfilepage3 />
+                <DigitalExcellence />
               </section>
 
               <section id="page4">
-                <CompanyProfilepage4 />
+                <OriginStory />
               </section>
 
               <section id="page5">
-                <CompanyProfilepage5 />
+                <WhatWeBelieve />
               </section>
 
-              {/* Services section removed */}
+              <section id="page6">
+                <Servicescard />
+              </section>
 
               <section id="page7">
-                <CompanyProfilepage7 />
+                <ImageSlider />
               </section>
 
               <section id="page8">
-                <CompanyProfilepage8 />
+                <OurClients />
               </section>
 
               <section id="page9">
-                <CompanyProfilepage9 />
+                <ClientTrust />
+              </section>
+
+              <section id="page10">
+                <ReviewsSection />
+              </section>
+
+              <section id="page11">
+                <Milestones />
+              </section>
+
+          
+              <section id="page12">
+                <WorkWithUs />
               </section>
 
               <Footer />
@@ -134,6 +155,16 @@ function App() {
           element={
             <>
               <PrivacyPage />
+              <Footer />
+            </>
+          }
+        />
+
+        <Route
+          path="/services/:slug"
+          element={
+            <>
+              <ServiceDetails />
               <Footer />
             </>
           }

@@ -505,8 +505,8 @@ export default function App() {
           <div className="right-col">
             <div className="timeline-wrapper">
               {/* Dashed connector SVG between cards */}
-              <svg className="timeline-connector" style={{height: '100%', position:'absolute'}} viewBox="0 0 2 220" preserveAspectRatio="none" height="220">
-                <line x1="1" y1="0" x2="1" y2="220"/>
+              <svg className="timeline-connector" style={{height: '100%', position:'absolute'}} viewBox="0 0 2 220" preserveAspectRatio="none" height="168">
+                <line x1="1" y1="0" x2="1" y2="168"/>
               </svg>
               {milestones.map((m, i) => (
                 <MilestoneCard key={i} m={m} index={i} />

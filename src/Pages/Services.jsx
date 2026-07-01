@@ -17,73 +17,7 @@ function useInView(threshold = 0.15) {
   return [ref, visible];
 }
 
-const services = [
-  {
-    num: "01",
-    title: "Product Development",
-    desc: "We build fast, responsive apps and websites that deliver seamless performance and a powerful user experience across all devices.",
-    icon: (
-      <svg viewBox="0 0 24 24" fill="none" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <polyline points="16 18 22 12 16 6" />
-        <polyline points="8 6 2 12 8 18" />
-      </svg>
-    ),
-  },
-  {
-    num: "02",
-    title: "Digital Marketing",
-    desc: "We drive business growth through result-driven digital marketing strategies that increase visibility, traffic, and conversions.",
-    icon: (
-      <svg viewBox="0 0 24 24" fill="none" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M3 11l18-8-8 18-2-8-8-2z" />
-      </svg>
-    ),
-  },
-  {
-    num: "03",
-    title: "E-Commerce Solutions",
-    desc: "We build high-performing eCommerce solutions that enhance user experience, boost sales, and scale your online business.",
-    icon: (
-      <svg viewBox="0 0 24 24" fill="none" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <circle cx="9" cy="21" r="1" />
-        <circle cx="20" cy="21" r="1" />
-        <path d="M1 1h4l2.7 13.4a2 2 0 0 0 2 1.6h9.7a2 2 0 0 0 2-1.6L23 6H6" />
-      </svg>
-    ),
-  },
-  {
-    num: "04",
-    title: "AI-Powered Solutions",
-    desc: "We leverage advanced AI technologies to automate processes, enhance decision-making, and drive smarter, scalable business growth.",
-    icon: (
-      <svg viewBox="0 0 24 24" fill="none" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <rect x="4" y="4" width="16" height="16" rx="3" />
-        <path d="M9 9h.01M15 9h.01M9 15c1 1 2 1.5 3 1.5s2-.5 3-1.5" />
-      </svg>
-    ),
-  },
-  {
-    num: "05",
-    title: "Complete RCM",
-    desc: "We deliver end-to-end RCM solutions that optimize your revenue cycle, reduce denials, and maximize collections.",
-    icon: (
-      <svg viewBox="0 0 24 24" fill="none" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M21 12a9 9 0 1 1-3-6.7L21 8" />
-        <polyline points="21 3 21 8 16 8" />
-      </svg>
-    ),
-  },
-  {
-    num: "06",
-    title: "Cloud & DevOps",
-    desc: "We design scalable cloud architectures and streamlined DevOps pipelines that boost reliability, speed, and deployment efficiency.",
-    icon: (
-      <svg viewBox="0 0 24 24" fill="none" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M17.5 19a4.5 4.5 0 1 0-1.4-8.8 6 6 0 0 0-11.6 2.3A4 4 0 0 0 6 19h11.5z" />
-      </svg>
-    ),
-  },
-];
+import { services } from "../Data/servicesData";
 
 export default function ServicesSection() {
   const [hovered, setHovered] = useState(null);
@@ -204,7 +138,9 @@ export default function ServicesSection() {
         /* ══════════════ GRID ══════════════ */
         .svc-grid-section{ padding:100px 6vw; background:#fff; }
         .svc-head-minimal{ text-align:center; margin-bottom:60px; }
-        .svc-head-minimal h2{ font-size:clamp(1.8rem,3.5vw,2.5rem); font-weight:900; color:var(--svc-ink); margin:0; }
+        .svc-head-minimal h2{ font-size:clamp(1.8rem,3.5vw,2.5rem); font-weight:900; color:var(--svc-ink);
+        .svc-head-minimal h2 span{ color:var(--svc-lime); }
+         margin:0; }
         .svc-grid{
           display:grid; grid-template-columns:repeat(3,1fr); gap:24px;
           max-width:1200px; margin:0 auto;
@@ -321,16 +257,15 @@ export default function ServicesSection() {
       {/* ══════════════ SERVICES GRID ══════════════ */}
       <div className="svc-grid-section">
         <div className="svc-head-minimal">
-          <h2>Professional IT Solutions</h2>
+          <h2>Professional <span>IT Solutions</span></h2>
         </div>
 
         <div className="svc-grid">
           {services.map((s, i) => (
             <div
-              key={s.num}
+              key={s.slug || i}
               className="svc-card"
-              onMouseEnter={() => setHovered(i)}
-              onMouseLeave={() => setHovered(null)}
+              onClick={() => navigate(`/services/${s.slug}`)}
             >
               <div className="svc-card-num">{s.num}</div>
               <div className="svc-icon-box">{s.icon}</div>

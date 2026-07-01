@@ -1,44 +1,44 @@
 import React, { useState } from "react";
-import cartImg from "../assets/Images/cart.png";
+import grsaf from "../assets/Images/grsaflogo.png";
 import smmImg from "../assets/Images/smm.png";
 import csImg from "../assets/Images/comingsoon.png";
-import dashboardImg from "../assets/Images/dashboard.png";
-import projectImg from "../assets/Images/project.png";
-import webappImg from "../assets/Images/webapp.png";
+import garImg from "../assets/Images/garlogo.png";
+import zagdigitalImg from "../assets/Images/zagdigitalLogo.png";
+import marchantsImg from "../assets/Images/marchantslogo.png";
+import ittecheraImg from "/favicon.png";
 
 const services = [
   {
-    num: "01",
     title: "Web/App Development",
     desc: `"We proudly delivered a complete digital solution for Marchants Ltd, including a custom-designed web platform, mobile application, eCommerce store, and a professional corporate website."`,
-    image: webappImg,
+    image: marchantsImg,
   },
   {
-    num: "02",
+    
     title: "SMM",
     desc: `"Provided professional Social Media Marketing and SEO services for Zag Digital, creating strategic campaigns to strengthen their online presence, improve search engine rankings, increase audience engagement, and drive sustainable brand growth across digital platforms."`,
-    image: smmImg,
+    image: zagdigitalImg,
   },
   {
-    num: "03",
+   
     title: "E-Commerce",
     desc: `"We developed a professional eCommerce store for GRSAF Store, combined with effective SEO strategies to enhance online visibility, improve search rankings, and drive more traffic and sales growth."`,
-    image: cartImg,
+    image: grsaf,
   },
   {
-    num: "04",
+    
     title: "Custom Power BI & Dashboards",
     desc: `"We successfully developed a custom Power BI dashboard for GAR, providing advanced data visualization and real-time reporting solutions. With an interactive dashboard system, it helped streamline business insights, enhance operational performance."`,
-    image: dashboardImg,
+    image: garImg,
   },
   {
-    num: "05",
+   
     title: "ITTECHERA Projects",
     desc: `"We are developing innovative ERP systems, HR & Financial platforms, project management solutions, and custom web & mobile applications tailored to modern business needs."`,
-    image: projectImg,
+    image: ittecheraImg,
   },
   {
-    num: "06",
+    
     title: "Coming Soon",
     desc: `"Your business could be our next success story. Let's build something extraordinary together."`,
     image: csImg,
@@ -205,7 +205,7 @@ export default function ServicesSection() {
           transition: background .3s, transform .3s;
         }
         .svc-card:hover .svc-icon-wrap {
-          background: #c8f000;
+          background: #c8f00060;
           transform: rotate(-8deg) scale(1.1);
         }
         .svc-icon-wrap svg {
@@ -370,9 +370,9 @@ export default function ServicesSection() {
               onMouseEnter={() => setHovered(i)}
               onMouseLeave={() => setHovered(null)}
             >
-             <div className="svc-icon-wrap image-wrap">
-  <img src={s.image} alt={s.title} />
-</div>
+              <div className="svc-icon-wrap image-wrap">
+                <img src={s.image} alt={s.title} />
+              </div>
               <div className="svc-card-title">{s.title}</div>
               <div className="svc-card-divider"></div>
               <p className="svc-card-desc">{s.desc}</p>
@@ -381,7 +381,7 @@ export default function ServicesSection() {
           ))}
         </div>
 
-       
+
 
       </div>
     </section>

@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import logo from "/favicon.png";
@@ -41,6 +40,12 @@ export default function Navbar() {
     <>
       <style>{`
       *{box-sizing:border-box;}
+
+      html, body{
+        margin:0;
+        padding:0;
+        background:#0e1928; /* matches hero/page dark theme so the floating navbar's top gap doesn't show white */
+      }
 
       .itcNav-navbar{
         position:fixed;
