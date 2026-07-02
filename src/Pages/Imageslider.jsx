@@ -4,6 +4,7 @@ import medtechera from "../assets/Images/medtecheralogo.png";
 import pmspro from "../assets/Images/pmsprologo.png";
 import operalogo from "../assets/Images/operalogo.png";
 import medstock from "../assets/Images/medstocklogo.png";
+import Grsaf from "../assets/Images/grsaflogo.png"
 const COLORS = {
   white: "#ffffff",
   navy: "#1c2238",
@@ -40,6 +41,12 @@ const slidesData = [
     img: medstock,
     title: "MedStock",
     description: "An inventory management platform built for medical stores — track new medicine stock as it arrives, monitor expiry dates, and get alerts for medicines that are expiring soon.",
+    link: "",
+  },
+  {
+    img: Grsaf,
+    title: "GRSAF",
+    description: "Developed a fully responsive e-commerce website for GRSAF Store featuring product listings, category management, shopping cart, secure checkout, and an optimized user experience across desktop and mobile devices.",
     link: "",
   },
   

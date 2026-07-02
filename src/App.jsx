@@ -15,6 +15,7 @@ import Servicescard from "./Pages/ServicesCards";
 import ImageSliders from "./Pages/Imageslider";
 import OurClients from "./Pages/OurClients";
 import ClientTrust from "./Pages/Clienttrust";
+import TechSlider from "./Pages/Technologies";
 import Milestones from "./Pages/Milestones";
 import WorkWithUs from "./Pages/Workwithus";
 import ReviewsSection from "./Pages/ReviewsSection";
@@ -87,16 +88,20 @@ function App() {
                 <ClientTrust />
               </section>
 
-              <section id="page10">
-                <ReviewsSection />
+               <section id="page10">
+                <TechSlider />
               </section>
 
               <section id="page11">
+                <ReviewsSection />
+              </section>
+
+              <section id="page12">
                 <Milestones />
               </section>
 
           
-              <section id="page12">
+              <section id="page13">
                 <WorkWithUs />
               </section>
 

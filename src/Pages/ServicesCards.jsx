@@ -1,68 +1,51 @@
 import React from "react";
-
-/* ── 6 services data (same headings as reference, custom icons + new copy) ── */
+import Weblogo from "../assets/Images/weblogo.png";
+import Ailogo from "../assets/Images/ailogo.png";
+import Mobilelogo from "../assets/Images/mobilelogo.png"
+import Crmlogo from "../assets/Images/crmlogo.png"
+import Ioslogo from "../assets/Images/ioslogo.png"
+import Devopslogo from "../assets/Images/devopslogo.png"
+import Androidapplogo from "../assets/Images/androidlogo.png"
 const servicesList = [
   {
-    title: "Product Development",
-    desc: "We turn ideas into fast, reliable digital products with clean code and thoughtful design.",
-    icon: (
-      <svg viewBox="0 0 24 24" fill="none" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <polyline points="8 6 2 12 8 18" />
-        <polyline points="16 6 22 12 16 18" />
-      </svg>
-    ),
+  
+   title: "Web Development",
+    image:Weblogo ,
+     desc: "We design and build fast, responsive websites and web apps tailored to your business — from clean architecture and pixel-perfect UI to solid, maintainable code. Our team works closely with you at every stage, so what ships matches the vision and scales smoothly as your traffic and features grow.",
   },
   {
-    title: "Digital Marketing",
-    desc: "We craft data-backed marketing campaigns that grow reach, traffic, and real conversions.",
-    icon: (
-      <svg viewBox="0 0 24 24" fill="none" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <line x1="4" y1="20" x2="20" y2="4" />
-        <polyline points="8 4 20 4 20 16" />
-      </svg>
-    ),
+    
+   title: "Artificial Intelligence",
+    image:Ailogo,
+    desc: "We build AI-powered products that actually get used — custom chatbots, autonomous AI agents, and workflow automations that plug into your existing tools. From natural language interfaces to predictive models, we help you put AI to work exactly where it saves the most time and effort.",
   },
   {
-    title: "E-Commerce Solutions",
-    desc: "We build seamless online stores designed to convert browsers into repeat customers.",
-    icon: (
-      <svg viewBox="0 0 24 24" fill="none" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <circle cx="9" cy="21" r="1.5" />
-        <circle cx="18" cy="21" r="1.5" />
-        <path d="M2 3h2l2.4 12.2a2 2 0 0 0 2 1.8h8.2a2 2 0 0 0 2-1.6L21 8H6" />
-      </svg>
-    ),
+    
+    title: "Mobile Apps",
+    image:Mobilelogo,
+    desc: "We design and develop cross-platform mobile apps that feel native, load fast, and keep users coming back. From wireframes to app-store launch, we handle the full journey — UI/UX, backend integration, push notifications, and ongoing support after release.",
   },
   {
-    title: "AI-Powered Solutions",
-    desc: "We embed intelligent automation into your workflows to save time and sharpen decisions.",
-    icon: (
-      <svg viewBox="0 0 24 24" fill="none" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <circle cx="12" cy="12" r="8" />
-        <circle cx="9" cy="10" r="1" fill="currentColor" stroke="none" />
-        <circle cx="15" cy="10" r="1" fill="currentColor" stroke="none" />
-        <path d="M9 15c1 1 5 1 6 0" />
-      </svg>
-    ),
+    title: "CRM Solutions",
+    image: Crmlogo,
+    desc: "We build and customize CRM systems that give your sales and support teams one clear view of every customer. From lead tracking and pipeline automation to reporting dashboards, we tailor the CRM to match how your team actually works, not the other way around.",
+  }, 
+  {
+    title: "iOS Apps",
+    image: Ioslogo,
+    desc: "We build native iOS apps in Swift that are fast, polished, and built to Apple's standards. From App Store guidelines to performance tuning, we handle every detail so your app looks and feels exactly at home on iPhone and iPad.",
   },
   {
-    title: "Complete RCM",
-    desc: "We streamline your revenue cycle end-to-end to cut denials and speed up collections.",
-    icon: (
-      <svg viewBox="0 0 24 24" fill="none" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M21 12a9 9 0 1 1-3-6.7" />
-        <polyline points="21 3 21 9 15 9" />
-      </svg>
-    ),
+    
+    title: "DevOps",
+    image: Devopslogo,
+    desc: "We architect scalable cloud infrastructure and automated CI/CD pipelines built for speed, security, and uptime. From containerization to monitoring and disaster recovery, we help your systems scale smoothly as demand grows, without engineering headaches along the way.",
   },
   {
-    title: "Cloud & DevOps",
-    desc: "We architect scalable cloud systems and automated pipelines built for speed and uptime.",
-    icon: (
-      <svg viewBox="0 0 24 24" fill="none" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M17.5 19a4.5 4.5 0 0 0 0-9 6 6 0 0 0-11.4 1.5A4 4 0 0 0 6 19h11.5z" />
-      </svg>
-    ),
+    title: "Android Apps",
+    image: Androidapplogo,
+    desc: "We build native Android apps in Kotlin that run smoothly across the full range of devices. From Play Store compliance to performance optimization, we make sure your app is fast, stable, and ready to scale to millions of users.",
+     
   },
 ];
 
@@ -91,37 +74,64 @@ export default function ServicesCards() {
         .svcx-grid{
           display:grid;
           grid-template-columns:repeat(3,1fr);
-          gap:24px;
+          gap:28px;
           max-width:1200px;
           margin:0 auto;
+        }
+
+        /* center the 7th (last, odd-one-out) card on the 3-column layout */
+        .svcx-card:last-child{
+          grid-column:2 / 3;
         }
 
         .svcx-card{
           background:#f8faf5;
           border:1px solid rgba(0,0,0,.05);
           border-radius:24px;
-          padding:40px 30px;
+          overflow:hidden;
           position:relative;
-          transition:.4s cubic-bezier(.22,1,.36,1);
+          display:flex;
+          flex-direction:column;
+          transition:transform .4s cubic-bezier(.22,1,.36,1),
+                     box-shadow .4s cubic-bezier(.22,1,.36,1),
+                     border-color .4s cubic-bezier(.22,1,.36,1);
         }
         .svcx-card:hover{
-          transform:translateY(-12px);
+          transform:translateY(-12px) scale(1.02);
           background:#fff;
           box-shadow:0 20px 50px rgba(0,0,0,.08);
           border-color:var(--svcx-lime);
         }
 
-        .svcx-icon-box{
-          width:60px; height:60px;
-          background:rgba(184,212,0,.15);
-          border-radius:15px;
-          display:flex; align-items:center; justify-content:center;
-          margin-bottom:25px;
-          color:var(--svcx-ink);
-          transition:.3s;
+        /* image sits at the top of the card so it's instantly clear
+           what each service is about */
+        .svcx-img-box{
+          position:relative;
+          width:100%;
+          aspect-ratio:16/10;
+          overflow:hidden;
         }
-        .svcx-card:hover .svcx-icon-box{ background:var(--svcx-lime); }
-        .svcx-icon-box svg{ width:30px; height:30px; stroke:currentColor; }
+        .svcx-img-box img{
+          width:100%; height:100%;
+          object-fit:cover; display:block;
+        }
+
+        .svcx-img-box::after{
+          content:'';
+          position:absolute; inset:0;
+          background:linear-gradient(180deg, rgba(22,34,56,0) 40%, rgba(22,34,56,.55) 100%);
+          pointer-events:none;
+        }
+
+        .svcx-card-num{
+          position:absolute; top:16px; right:18px; z-index:2;
+          font-size:14px; font-weight:900; color:#fff;
+          background:rgba(22,34,56,.55);
+          backdrop-filter:blur(4px);
+          padding:4px 12px; border-radius:20px;
+        }
+
+        .svcx-card-body{ padding:28px 30px 32px; }
 
         .svcx-card-title{
           font-size:1.25rem;
@@ -132,17 +142,20 @@ export default function ServicesCards() {
         .svcx-card-desc{
           font-size:15px;
           color:var(--svcx-muted);
-          line-height:1.7;
+          line-height:1.75;
           margin:0;
         }
 
         @media (max-width:1024px){
           .svcx-grid{ grid-template-columns:repeat(2,1fr); }
+          .svcx-card:last-child{ grid-column:auto; }
         }
 
         @media (max-width:600px){
           .svcx-grid{ grid-template-columns:1fr; }
+          .svcx-card:last-child{ grid-column:auto; }
           .svcx-section{ padding:70px 5vw; }
+          .svcx-card-body{ padding:24px 22px 28px; }
         }
       `}</style>
 
@@ -154,9 +167,14 @@ export default function ServicesCards() {
         <div className="svcx-grid">
           {servicesList.map((s, i) => (
             <div className="svcx-card" key={i}>
-              <div className="svcx-icon-box">{s.icon}</div>
-              <h3 className="svcx-card-title">{s.title}</h3>
-              <p className="svcx-card-desc">{s.desc}</p>
+              <div className="svcx-img-box">
+                <img src={s.image} alt={s.title} loading="lazy" />
+                <div className="svcx-card-num">{s.num}</div>
+              </div>
+              <div className="svcx-card-body">
+                <h3 className="svcx-card-title">{s.title}</h3>
+                <p className="svcx-card-desc">{s.desc}</p>
+              </div>
             </div>
           ))}
         </div>

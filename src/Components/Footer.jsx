@@ -45,6 +45,16 @@ export default function Footer() {
           padding-bottom: 48px;
           border-bottom: 1px solid rgba(255,255,255,.07);
         }
+          .ft-contact-val {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.ft-contact-val:hover {
+  color: #b8d400;
+}
         .ft-logo { display: flex; align-items: center; gap: 14px; margin-bottom: 18px; }
         .ft-logo-bar { width: 4px; height: 44px; border-radius: 99px; background: #c8f000; box-shadow: 0 0 14px #c8f00066; }
         .ft-logo-text h2 { margin: 0; font-size: 22px; font-weight: 800; letter-spacing: 2px; color: #fff; }
@@ -143,15 +153,25 @@ export default function Footer() {
                   </div>
                 </a>
 
-                <a className="ft-contact-row" href="tel:+923419168831">
-                  <div className="ft-contact-icon">
-                    <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.9 10.8a19.79 19.79 0 01-3.07-8.67A2 2 0 012.81 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.09 6.09l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
-                  </div>
+               <div className="ft-contact-row">
+                    <div className="ft-contact-icon">
+                      <svg viewBox="0 0 24 24">
+                        <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.9 10.8a19.79 19.79 0 01-3.07-8.67A2 2 0 012.81 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.09 6.09l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
+                      </svg>
+                    </div>
+
                   <div>
                     <div className="ft-contact-label">Phone</div>
-                    <div className="ft-contact-val">+92 3419 168831</div>
+
+                    <a href="tel:+923419168831" className="ft-contact-val">
+                      +92 3419 168831
+                    </a>
+
+                    <a href="tel:+923001234567" className="ft-contact-val">
+                      +92 3055 920318
+                    </a>
                   </div>
-                </a>
+                </div>
 
                 <a className="ft-contact-row" href="https://ittechera.co.uk" target="_blank" rel="noreferrer">
                   <div className="ft-contact-icon">

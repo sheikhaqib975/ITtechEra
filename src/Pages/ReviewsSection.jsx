@@ -3,47 +3,49 @@ import React from "react";
 const reviews = [
   {
     name: "Sarah Mitchell",
-    role: "CTO, Meridian Health",
+    
     rating: 5,
-    text: "Their RCM team cut our A/R days almost in half within the first quarter. Communication was clear at every step and the results spoke for themselves.",
+    text: "Their medical billing team significantly improved our claim approval rate and reduced payment delays. The reporting was transparent, and their support team was always available whenever we needed assistance.",
     initials: "SM",
   },
   {
     name: "David Chen",
-    role: "Founder, Chen & Co.",
+   
     rating: 5,
-    text: "We handed off a messy backlog of claims and they turned it around faster than we expected. Clean claim rate has stayed above 98% ever since.",
+    text: "Our new e-commerce website exceeded expectations. It is fast, modern, easy to manage, and has noticeably increased online orders. The entire development process was smooth from start to finish.",
     initials: "DC",
   },
   {
     name: "Amina Raza",
-    role: "Ops Manager, Prime Care",
-    rating: 4,
-    text: "Solid technical execution and a genuinely responsive team. A couple of onboarding hiccups early on, but support resolved everything quickly.",
+   
+    rating: 5,
+    text: "The custom Power BI dashboards gave us real-time visibility into our business performance. Reports that used to take hours are now available instantly, helping us make better decisions every day.",
     initials: "AR",
   },
   {
     name: "James Whitfield",
-    role: "Director, Whitfield Clinics",
+
     rating: 5,
-    text: "What stood out was how proactively they flagged denial patterns before they became a real problem. Denial rate dropped noticeably within weeks.",
+    text: "Their social media marketing strategy helped us grow our audience and generate quality leads consistently. The creative content and campaign management delivered excellent results.",
     initials: "JW",
   },
   {
     name: "Laila Hassan",
-    role: "Practice Owner",
+    
     rating: 5,
-    text: "Straightforward reporting, no surprises on billing, and a team that actually picks up the phone. Exactly what we needed after switching vendors.",
+    text: "The website they built perfectly reflects our brand. It is responsive, professionally designed, and optimized for performance. We've received great feedback from our customers.",
     initials: "LH",
   },
   {
     name: "Michael Osei",
-    role: "VP Finance, Nova Med",
-    rating: 4,
-    text: "Reliable partner for our revenue cycle. Dashboards are easy to read and their consultants explain the numbers in plain language.",
+    
+    rating: 5,
+    text: "Our mobile application was delivered on time with outstanding quality. The user experience is excellent, and the development team was responsive throughout the entire project.",
     initials: "MO",
   },
+ 
 ];
+
 
 function Star({ filled }) {
   return (
